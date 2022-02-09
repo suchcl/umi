@@ -8,11 +8,11 @@ export default defineConfig({
   },
   // 布局
   layout: {},
-  // routes: router,
+  routes: router,
   fastRefresh: {},
   // 路由模式
-  history:{
-    type: 'hash' // hash || history
-  },
+  // history:{
+  //   type: 'hash' // hash || history
+  // },
   mfsu: {} // 启用mfsu
 });
