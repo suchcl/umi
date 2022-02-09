@@ -4,7 +4,7 @@ import router from './src/router/router';
 
 export default defineConfig({
   nodeModulesTransform: {
-    type: 'none',
+    type: 'none'
   },
   // 布局
   layout: {},
