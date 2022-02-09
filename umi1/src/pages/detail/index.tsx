@@ -6,7 +6,7 @@ export default function DetailPage(){
                 <a href="/">首页</a>
             </li>
             <li>
-                <a href="#/list">列表页</a>
+                <a href="/list">列表页</a>
             </li>
         </ul>
     </div>
