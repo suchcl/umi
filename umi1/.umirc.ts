@@ -8,7 +8,7 @@ export default defineConfig({
   },
   // 布局
   layout: {},
-  routes: router,
+  // routes: router,
   fastRefresh: {},
   // 路由模式
   history:{

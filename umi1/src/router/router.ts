@@ -6,6 +6,10 @@ const router: any = [
     {
         path: "/list/",
         component: "@/pages/list/index"
+    },
+    {
+        path: "/detail",
+        component: "@/pages/detail/index"
     }
   ]
   
