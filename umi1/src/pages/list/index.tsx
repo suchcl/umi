@@ -1,5 +1,7 @@
 import { Link } from "umi";
-export default function ListPage(){
+export default function ListPage(props:any){
+    const id = props.location.query.id;
+    console.log("id: ", id);
     return (
         <div>
             <ul className="nav">
