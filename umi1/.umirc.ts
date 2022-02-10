@@ -14,5 +14,7 @@ export default defineConfig({
   // history:{
   //   type: 'hash' // hash || history
   // },
-  mfsu: {} // 启用mfsu
+  mfsu: {}, // 启用mfsu,
+  // 配置build的打包目录，默认为dist，一般情况下不需要修改
+  outputPath: "build"
 });

@@ -1,14 +1,14 @@
-import { history } from "umi";
+import { history,Link } from "umi";
 export default (props:any) => {
     // 编程式路由跳转
     const changeProfile = () => {
-        history.push("profile?key=sun");
+        history.push("/user/profile?key=sun");
     }
 
     // 完善个人资料，账号安全
     const improvePersonalData = () => {
         history.push({
-            pathname: "account",
+            pathname: "/user/account",
             query: {
                 from: "moon"
             }
@@ -23,6 +23,7 @@ export default (props:any) => {
         <br />
         {/* 这里可以使用相对路径 */}
         <a href="account">账号安全</a>
+        <Link to="account">Link去账号安全</Link>
         {/* 通过props.children来渲染子路由 */}
         <button onClick={changeProfile}>去修改个人档案</button>
         <button onClick={improvePersonalData}>完善个人资料</button>
