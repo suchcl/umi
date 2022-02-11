@@ -6,6 +6,7 @@ import style from "./detail.less";
 import "./detail-base.less";
 export default function DetailPage(){
     const [ids,setIds] = useState(12);
+    const [img,setImg] = useState("https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics0.baidu.com%2Ffeed%2Fcdbf6c81800a19d8840f74d2e1525f82a71e460f.jpeg%3Ftoken%3D47061aced24ae4d7afbe1e218fb4dd4f&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1644685200&t=13b4467f9933a1f5be4098882e5d774b");
     const toList = (id:any):void => {
         history.push({
             pathname: "/list",
@@ -43,6 +44,22 @@ export default function DetailPage(){
         </div>
         {/* CSS Modules模式的样式引用 */}
         <div className={style.box}>
+            <div className={style.pic}>
+                {/* 图片需要使用require导入，可以是相对路径 */}
+                <img src={require("./images/i1.jpg")} alt="" />
+            </div>
+            <div className={style.pic}>
+                <img src={require("./images/i3.jpg")} alt="" />
+            </div>
+            <div className={style.pic}>
+                {/* 图片可以使用接口下发的地址作为src的属性值 */}
+                <img src={img} alt="" />
+            </div>
+            <div className={style.pic}>
+                {/* 图片路径，可以是相对路径，也可以是绝对路径，使用绝对路径的时候可以使用别名@，@指向src目录 */}
+                <img src={require("@/pages/detail/images/i2.jpg")} alt="" />
+            </div>
+
             <div className={style.text}>
                 <h4>CSS Modules</h4>
                 <p>好消息：一则数据传来，美国白忙活了，华为赢了</p>
