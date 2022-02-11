@@ -31,6 +31,10 @@ const router: any = [
                 title: "账号安全"
             }
         ]
+    },
+    {
+        path: "/pic",
+        component: "@/pages/picture/index"
     }
   ]
   
