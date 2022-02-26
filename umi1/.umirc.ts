@@ -16,5 +16,7 @@ export default defineConfig({
   // },
   mfsu: {}, // 启用mfsu,
   // 配置build的打包目录，默认为dist，一般情况下不需要修改
-  outputPath: "build"
+  outputPath: "build",
+  // 配置图片质量编译为base64，单位为字节，默认为10000，10kb
+  inlineLimit: 10000
 });

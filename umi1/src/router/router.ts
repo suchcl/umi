@@ -1,4 +1,4 @@
-const router: any = [
+const router = [
     {
         path: "/",
         component: "@/pages/index"
