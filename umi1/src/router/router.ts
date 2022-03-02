@@ -35,6 +35,14 @@ const router = [
     {
         path: "/pic",
         component: "@/pages/picture/index"
+    },
+    {
+        path: "/performance",
+        component: "@/pages/performance/index"
+    },
+    {
+        path: "/perfList",
+        component: "@/pages/performance/list"
     }
   ]
   

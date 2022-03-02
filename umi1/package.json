@@ -22,6 +22,7 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.32.6",
     "global": "^4.4.0",
+    "nanoid": "^3.3.1",
     "react": "17.x",
     "react-dom": "17.x",
     "serve": "^13.0.2",

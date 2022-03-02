@@ -1,18 +1,23 @@
 import styles from './index.less';
 import { Link } from 'umi';
+import Nav from "../components/nav";
 
 export default function IndexPage() {
   return (
     <div>
       <h1 className={styles.title}>Page index</h1>
-      <ul className="nav">
+      {/* <ul className="nav">
         <li>
           <Link to="/list">列表页</Link>
         </li>
         <li>
           <Link to="/detail">详情页</Link>
         </li>
-      </ul>
+        <li>
+          <Link to="/performance">性能测试</Link>
+        </li>
+      </ul> */}
+      <Nav />
       
       <div className="user-center">
         <a href="/user">大个人中心</a>
