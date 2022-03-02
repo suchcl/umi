@@ -1,6 +1,6 @@
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import Nav from "../../components/nav";
-import { useState } from "react";
+import { useState, memo, useCallback } from "react";
 
 // 创建模拟数据
 const data = new Array(100)
@@ -15,13 +15,16 @@ export default () => {
     // 包含所选项的数组
     const [selected, setSelected] = useState([]);
 
-    const toggleItem = (item) => {
-        if (!selected.includes(item)) {
-            setSelected([...selected, item]);
-        } else {
-            setSelected(selected.filter((current) => current !== item));
-        }
-    };
+    const toggleItem = useCallback((item) => {
+        setSelected((prevSelected) => {
+            if (!prevSelected.includes(item)) {
+                return [...prevSelected, item];
+            } else {
+                return prevSelected.filter((current) => current !== item);
+            }
+        });
+    }, []);
+
 
     return (
         <div className="App">
@@ -35,39 +38,43 @@ export default () => {
 };
 
 const List = ({ data, selectedItems, toggleItem }) => {
+    const MemoizedListItem = memo(ListItem);
+    const handleClick = useCallback(
+        (item) => {  // We now receive the selected item
+            toggleItem(item);
+            // console.log(item);
+        },
+        [toggleItem]
+    );
+
     return (
         <ul>
-            {
-                data.map((item) => (
-                    <ListItem
-                        name={item.name}
-                        selected={selectedItems.includes(item)}
-                        onClick={() => toggleItem(item)}
-                        // key={item.id}
-                        key={nanoid()}
-                    />)
-                )
-            }
+            {data.map((item) => (
+                <MemoizedListItem
+                    key={item.id}
+                    item={item}  // We pass the full item instead of the name
+                    selected={selectedItems.includes(item)}
+                    onClick={handleClick}
+                />
+            ))}
         </ul>
     );
 };
 
-const ListItem = ({ name, selected, onClick }) => {
+const ListItem = ({ item, selected, onClick }) => {
     expensiveOperation(selected);
-
     return (
-        <li
-            style={selected ? { textDecoration: 'line-through' } : undefined}
-            onClick={onClick}
+        <li style={selected ? { textDecoration: 'line-through' } : undefined}
+            onClick={() => onClick(item)}
         >
-            {name}
+            {item.name}
         </li>
-    );
-};
+    )
+}
 
 const expensiveOperation = (selected) => {
     let total = selected ? 1 : 0;
-    for (let i = 0; i < 200000; i++) {
+    for (let i = 0; i < 2000; i++) {
         total += Math.random();
     }
     return total;
