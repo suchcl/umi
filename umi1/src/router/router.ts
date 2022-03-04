@@ -43,6 +43,10 @@ const router = [
     {
         path: "/perfList",
         component: "@/pages/performance/list"
+    },
+    {
+        path: "/event",
+        component: "@/pages/event/index"
     }
   ]
   

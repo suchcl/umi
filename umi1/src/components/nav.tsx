@@ -14,6 +14,9 @@ export default () => {
             <li>
                 <Link to="/perfList">性能列表</Link>
             </li>
+            <li>
+                <Link to="/event">事件机制</Link>
+            </li>
         </ul>
     )
 }
