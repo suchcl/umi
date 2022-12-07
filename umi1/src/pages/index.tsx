@@ -24,12 +24,31 @@ export default function IndexPage() {
     });  
   }
 
+
+
+  function pluck<T, K extends keyof T>(o:T,names: K[]):T[K][]{
+    return names.map(n => o[n]);
+  }
+
+  interface Person{
+    name: string,
+    age: number
+  }
+  let per:Person = {
+    name: "Nicholas",
+    age: 16
+  };
+  let strings:string[] = pluck(per,['name']);
+  
+
   return (
     <div>
       <h1 className={styles.title}>Page index</h1>
       <Nav />
       <div className="http">
         <Button type='primary' onClick={(event) => getUser(event)}>{id}</Button>
+        <br />
+        <Button type='primary' onClick={() => {getPerson(per)}}>提取类型</Button>
       </div>
       <div className="user-center">
         <a href="/user">大个人中心</a>
