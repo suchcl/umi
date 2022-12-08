@@ -16,6 +16,18 @@ const router = [
         component: "@/pages/state/index"
     },
     {
+        path: "/focusInput",
+        component: "@/pages/state/focusInput"
+    },
+    {
+        path: "/likeButton",
+        component: "@/pages/state/LikeButton"
+    },
+    {
+        path: "/globalLike",
+        component: "@/pages/state/GlobalLike"
+    },
+    {
         path: "/user",
         component: "@/pages/user/index",
         routes:[

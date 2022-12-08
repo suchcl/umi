@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 
 const State = () => {
-    const [name,setName] = useState("Nicholas Zakas");
-    const changeName = () => {
-        setName("我改了名字了");
-    }
+    const refBtn = useRef(null);
+
+    useEffect(() => {
+        refBtn.current.addEventListener("click", () => {
+            console.log("ref按钮被点击了");
+        })
+    },[]);
+
     return (
         <>
-            <p>姓名: {name}</p>
-            <div>state</div>
-            <button onClick={changeName}>变名</button>
+            <div>useRef</div>
+            <button ref={refBtn}>ref按钮</button>
         </>
     )
 }
