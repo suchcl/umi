@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 
 const LinkeButton: FC = () => {
     const [like, setLike] = useState(0);
+
     const handleAlertClick = () => {
         setTimeout(() => {
             alert(`你点击了${like}`);
