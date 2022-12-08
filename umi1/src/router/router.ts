@@ -12,6 +12,10 @@ const router = [
         component: "@/pages/detail/index"
     },
     {
+        path: "/state",
+        component: "@/pages/state/index"
+    },
+    {
         path: "/user",
         component: "@/pages/user/index",
         routes:[
