@@ -28,6 +28,10 @@ const router = [
         component: "@/pages/state/GlobalLike"
     },
     {
+        path: "/cRef",
+        component: "@/pages/state/Parent"
+    },
+    {
         path: "/user",
         component: "@/pages/user/index",
         routes:[
