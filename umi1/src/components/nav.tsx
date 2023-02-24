@@ -1,9 +1,13 @@
 import {Link} from "umi";
+import styles from "./nav.less";
 export default () => {
     return (
-        <ul className="nav">
+        <ul className={styles.nav}>
             <li>
                 <Link to="/list">列表页</Link>
+            </li>
+            <li>
+                <Link to="/useMemo">useMemo</Link>
             </li>
             <li>
                 <Link to="/detail">详情页</Link>
@@ -16,6 +20,9 @@ export default () => {
             </li>
             <li>
                 <Link to="/event">事件机制</Link>
+            </li>
+            <li>
+                <Link to="/upload">附件上传</Link>
             </li>
         </ul>
     )

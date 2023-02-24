@@ -4,6 +4,10 @@ const router = [
         component: "@/pages/index"
     },
     {
+        path: "/useMemo",
+        component: "@/pages/UseMemo/Parent"
+    },
+    {
         path: "/list/",
         component: "@/pages/list/index"
     },
@@ -67,6 +71,10 @@ const router = [
     {
         path: "/event",
         component: "@/pages/event/index"
+    },
+    {
+        path: '/upload',
+        component: "@/pages/upload/index"
     }
   ]
   

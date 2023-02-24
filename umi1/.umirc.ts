@@ -7,7 +7,7 @@ export default defineConfig({
     type: 'none'
   },
   // 布局
-  layout: {},
+  // layout: {},
   routes: router,
   fastRefresh: {},
   // 路由模式
