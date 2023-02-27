@@ -24,6 +24,9 @@ export default () => {
             <li>
                 <Link to="/upload">附件上传</Link>
             </li>
+            <li>
+                <Link to="/ts">TS相关</Link>
+            </li>
         </ul>
     )
 }

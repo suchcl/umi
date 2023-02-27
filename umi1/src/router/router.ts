@@ -4,6 +4,10 @@ const router = [
         component: "@/pages/index"
     },
     {
+        path: "/ts",
+        component: '@/pages/ts'
+    },
+    {
         path: "/useMemo",
         component: "@/pages/UseMemo/Parent"
     },
@@ -38,9 +42,9 @@ const router = [
     {
         path: "/user",
         component: "@/pages/user/index",
-        routes:[
+        routes: [
             {
-                path:"profile", // 这里的path配置，不要带/，访问路径为： /user/profile
+                path: "profile", // 这里的path配置，不要带/，访问路径为： /user/profile
                 component: "@/pages/user/profile/index",
                 title: "个人档案"
             },
@@ -76,6 +80,6 @@ const router = [
         path: '/upload',
         component: "@/pages/upload/index"
     }
-  ]
-  
+]
+
 export default router;
