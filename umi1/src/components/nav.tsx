@@ -7,6 +7,9 @@ export default () => {
                 <Link to="/list">列表页</Link>
             </li>
             <li>
+                <Link to="/rerender">重新渲染</Link>
+            </li>
+            <li>
                 <Link to="/useMemo">useMemo</Link>
             </li>
             <li>

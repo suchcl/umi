@@ -8,6 +8,10 @@ const router = [
         component: '@/pages/ts'
     },
     {
+        path: "/rerender",
+        component: '@/pages/render'
+    },
+    {
         path: "/useMemo",
         component: "@/pages/UseMemo/Parent"
     },
