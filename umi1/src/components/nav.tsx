@@ -30,6 +30,9 @@ export default () => {
             <li>
                 <Link to="/ts">TS相关</Link>
             </li>
+            <li>
+                <Link to="/qrcode">二维码</Link>
+            </li>
         </ul>
     )
 }

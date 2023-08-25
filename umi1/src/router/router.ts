@@ -4,6 +4,10 @@ const router = [
         component: "@/pages/index"
     },
     {
+        path: "/qrcode",
+        component: "@/pages/qrcode"
+    },
+    {
         path: "/ts",
         component: '@/pages/ts'
     },
